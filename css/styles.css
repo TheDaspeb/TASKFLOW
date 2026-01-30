@@ -1,0 +1,562 @@
+/* =========================
+   VARIABLES DE COLOR
+========================= */
+:root {
+    --primary: #6366f1;      /* violeta moderno */
+    --secondary: #22c55e;    /* verde éxito */
+    --warning: #f59e0b;      /* amarillo */
+    --background: #f4f6fb;   /* fondo app */
+    --card-bg: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-radius: 16px;
+    --shadow: 0 10px 25px rgba(0,0,0,0.08);
+    --transition: all 0.3s ease;
+    --shadow-Ig: 0 10px 15px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-sm: 0 2px 4px 
+}
+
+/* =========================
+   RESERT BÁSICO
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135 deg, #eef2ff, #fdf2f8);
+    color : var(--text-main);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* =========================
+   contenedores
+========================= */
+
+.app-container {
+    min-height: 100vh;
+    padding: 2rem, 1rem
+}
+
+.main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* =========================
+   header
+========================= */
+
+.app-header {
+    margin-bottom: 2rem;
+    margin-top: 50px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-icon {
+    background: var(--primary);
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.app-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.app-subtitle {
+    color: var(--text-muted)
+
+}
+
+.card-boby, .color {
+    color: var(--text-main)
+}
+
+/* =========================
+   modo oscuro
+===========================*/
+
+boby.dark-mode {
+    --background: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: white;
+    --text-muted: #94a3b8;
+}
+
+body.dark-mode {
+    background: 
+    linear-gradient(135deg, #020617, #0f172a);
+}
+
+body.dark-mode .dark-mode-button {
+    background: #1e293b;
+    color: white;
+}
+
+.dark-mode-button {
+    background: white;
+    border: none;
+    border-radius: 50%;
+    padding: 0.75rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease;
+}
+
+.dark-mode-button:hover {
+    transform: scale(1.1);
+}
+
+
+body.dark-mode .app-title{
+    color: #f8fafc;
+}
+
+body.dark-mode h2  {
+    color: #f8fafc;
+}
+
+body.dark-mode label  {
+    color: #f8fafc;
+}
+
+body.dark-mode h5 {
+    color: #f8fafc;
+}
+
+body.dark-mode .color {
+    color: #f8fafc;
+}
+
+body.dark-mode .filters-section  {
+    background: 
+    linear-gradient(135deg,rgba(170, 169, 169, 0.301))
+}
+
+body.dark-mode .tasks-section  {
+    background: 
+    linear-gradient(135deg,rgba(170, 169, 169, 0.301))
+}
+
+body.dark-mode .task-desc {
+    color: #f8fafc;
+}
+
+body.dark-mode small{
+    color: #f8fafc;
+}
+
+body.dark-mode .final  {
+    color: #f8fafc;
+}
+
+body.dark-mode .stat-label  {
+    color: #f8fafc;
+}
+
+body.dark-mode input {
+    background: #a9acb1;
+    color: #000000;
+    border: none;
+}
+
+body.dark-mode .card-body {
+    background: #1f2937;
+}
+
+body.dark-mode textarea {
+    background: #a9acb1;
+    color: #000000;
+    border: none;
+}
+
+body.dark-mode select {
+    background: #a9acb19d;
+    color: #f8fafc;
+    border: none;
+}
+
+/* =========================
+   Stats cards
+==========================*/
+body.dark-mode .stat-card {
+    background: 
+    linear-gradient(135deg,rgba(170, 169, 169, 0.301))
+}
+
+body.dark-mode .task-form-section  {
+    background: 
+    linear-gradient(135deg,rgba(170, 169, 169, 0.301))
+}
+
+body.dark-mode .form-section {
+    background: 
+    linear-gradient(135deg,rgba(170, 169, 169, 0.349))
+}
+
+/* =========================
+   Estadisticas
+ =======================*/
+
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    gap: 1rem;
+}
+
+.stat-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.stat-number.pending {
+    color: var(--warning);
+}
+
+.stat-number.in-progress {
+    color: var(--primary);
+}
+
+.stat-number.completed {
+    color: var(--secondary);
+}
+
+/* =========================
+   sección 
+=========================*/
+
+section {
+    margin-bottom: 2rem;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.section-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* =========================
+   Formulario
+===========================*/
+
+.form-field {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: 600;
+}
+
+input,
+textarea,
+select {
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+.error-input {
+    border: 2px solid red;
+    border-color: rgb(255, 82, 82) !important;
+    animation: shake 0.3s ease;
+}
+
+.error-text {
+    display: none;
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+.error-input ~ .error-text {
+    display: block;
+}
+
+/* ==========================================
+   ICONOS DE ESTADO
+   ========================================== */
+
+.estado-icon {
+    font-size: 1.25rem;
+}
+
+.icon-pendiente {
+    color: #ffc107;
+}
+
+.icon-en-proceso {
+    color: #0d6efd;
+}
+
+.icon-completada {
+    color: #198754;
+}
+/* ==========================================
+   TARJETAS DE TAREAS
+   ========================================== */
+
+.task-card {
+    border-left: 8px solid;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.task-card.border-pendiente {
+    border-left-color: #ffc107;
+}
+
+.task-card.border-en-proceso {
+    border-left-color: #0d6efd;
+}
+
+.task-card.border-completada {
+    border-left-color: #198754;
+    opacity: 0.75;
+}
+
+.task-card.completada .task-title,
+.task-card.completada .task-description {
+    text-decoration: line-through;
+}
+
+/* ==========================================
+   BADGES DE PRIORIDAD
+   ========================================== */
+
+.badge-prioridad {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    border: 1px solid;
+}
+
+.badge-alta {
+    background-color: #fee;
+    color: #dc3545;
+    border-color: #fcc;
+}
+
+.badge-media {
+    background-color: #fff3cd;
+    color: #856404;
+    border-color: #ffeaa7;
+}
+
+.badge-baja {
+    background-color: #d1f2eb;
+    color: #0f5132;
+    border-color: #a7e9d7;
+}
+
+
+/* =========================
+   Boton crear tarea
+==========================*/
+
+.submit-task-button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    transition: var(--background) 0.2s ease, transform 0.2s ease;
+}
+
+.submit-task-button:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+
+}
+
+/* =========================
+   Filtros
+==========================*/
+
+.filters-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* =========================
+   Lista de tareas
+==========================*/
+
+.toast {
+    min-width: 300px;
+}
+
+.toast-success {
+    border-left: 4px solid #198754;
+}
+
+.toast-error {
+    border-left: 4px solid #dc3545;
+}
+
+.toast-info {
+    border-left: 4px solid #0d6efd;
+}
+
+
+
+/* =========================
+   Lista de tareas
+==========================*/
+
+.task-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.empty-message,
+.empty.message,
+.no-results-message {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+
+/* ======================
+    Boton eliminar
+====================== */
+
+.btn {
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: var(--primary-gradient);
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-delete {
+    color: #dc3545;
+    background-color: #cf43513d;
+    transition: var(--transition);
+}
+
+.btn-delete:hover {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+body.dark-mode .btn-delete:hover {
+    background-color: rgba(220, 53, 69, 0.2);
+}
+
+/*=====================
+    Responsive
+=====================*/
+
+@media (max-width: 600px) {
+    .app-title {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+}
+
+/* =====================
+    Animaciones
+===================== */
+
+@keyframes fadeln {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.task-card {
+    animation: fadeln 0.3s ease;
+}
+
+@keyframes shake{
+    0%, 100% {transform: translateX(0)}
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.3s ease;
+}
